@@ -38,7 +38,7 @@ const Modal: React.FC<ModalProps> = ({
 		onSubmit();
 	}, [disabled, onSubmit]);
 
-	if (!open) {
+	if (!isOpen) {
 		return;
 	}
 
@@ -95,6 +95,7 @@ const Modal: React.FC<ModalProps> = ({
 								fullWidth
 								onClick={handleSubmit}
 							/>
+							{footer}
 						</div>
 					</div>
 				</div>
