@@ -10,6 +10,7 @@ const RegisterModal = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [name, setName] = useState("");
+	const [username, setUserName] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 
 	const onToggle = useCallback(() => {
@@ -43,15 +44,21 @@ const RegisterModal = () => {
 				disabled={isLoading}
 			/>
 			<Input
-				placeholder='Password'
-				onChange={(e) => setPassword(e.target.value)}
-				value={password}
+				placeholder='Name'
+				onChange={(e) => setName(e.target.value)}
+				value={name}
 				disabled={isLoading}
 			/>
 			<Input
-				placeholder='Name'
-				onChange={(e) => e.target.value}
-				value={name}
+				placeholder='UserName'
+				onChange={(e) => setUserName(e.target.value)}
+				value={username}
+				disabled={isLoading}
+			/>
+			<Input
+				placeholder='Password'
+				onChange={(e) => setPassword(e.target.value)}
+				value={password}
 				disabled={isLoading}
 			/>
 		</div>
